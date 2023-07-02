@@ -1,0 +1,278 @@
+.app__orders {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__orders-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__orders-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+}
+
+.app__orders-controls_search {
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input {
+        background-color: var(--color-text);
+        color: var(--color-dark);
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        padding: 1rem 0.5rem;
+
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 51px;
+        width: 51px;
+        // padding: 0.5rem 1rem;
+        cursor: pointer;
+        
+        background-color: var(--color-gray);
+        border-color: var(--color-subtext);
+        border-width: 1px;
+        border-style: solid;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left-width: 0.5px;
+
+        svg {
+            // font-size: 27px;
+            path {
+                stroke: var(--color-text);
+            }
+        }
+        &:hover {
+            background-color: var(--color-button);
+            border-color:var(--color-button);
+            svg {
+                color: #fff
+
+            }
+        }
+        
+
+        &:active {
+            background-color: var(--color-title);
+            border-color:var(--color-title);
+            svg {
+                color: #fff
+            }
+        }
+    }
+}
+
+.app__orders-controls_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    p {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color-text);
+    }
+}
+
+
+.app__orders-table {
+    display: flex;
+    margin-top: 3rem;
+    table {
+        border-collapse:collapse;
+        background-color: #2A3338;  
+        border-radius: 10px;
+        width: 100%;
+    }
+    thead > tr {
+        height: 50px;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: #3D4449;
+        border-radius: 50px;
+        th {
+            text-align: left;
+            padding: 10px;
+            min-width: 100px;
+        }
+    }
+
+    tbody {
+        tr  {
+
+            &:hover{
+                background-color: var(--color-footer);
+            }
+
+            td {
+                color: var(--color-text);
+                vertical-align: top;
+                padding: 10px;
+            } 
+        }
+    }
+}
+
+.col__actions {
+    text-align: center;
+
+    svg {
+        margin: 0 5px;
+        cursor: pointer;
+
+        // &:hover:nth-child(1){
+        //     color: #f1c40f;
+        // }
+        // &:hover:nth-child(2){
+        //     color: #D52D2C;
+        // }
+    }
+}
+
+.action__archive:hover {
+    color: #D52D2C;
+}
+
+.action__activate:hover {
+    color: #1ABC9C
+}
+
+.action__edit:hover {
+    color: #f1c40f;
+}
+
+.app__orders-add {
+    background-color: var(--color-button);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 30%;
+    max-width: 450px;
+    min-width: 350px;
+    z-index: 10;
+    transition: 0.5s ease;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    &>svg {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        color:  var(--color-text);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    form {
+        margin: 4rem 1.5rem;
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+
+            input {
+                margin-top: 5px;
+                color: #fff;
+                border-color:  rgba(255, 255, 255, 0.5);
+                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: rgba(255, 255, 255, 0.5);
+                    opacity: 1; /* Firefox */
+                  }
+                  
+                  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+                  
+                  &::-ms-input-placeholder { /* Microsoft Edge */
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+            }
+
+            textarea {
+                margin-top: 5px;
+                color: #fff;
+                border-color:  rgba(255, 255, 255, 0.5);
+                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: rgba(255, 255, 255, 0.5);
+                    opacity: 1; /* Firefox */
+                  }
+                  
+                  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+                  
+                  &::-ms-input-placeholder { /* Microsoft Edge */
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+            }
+
+        }
+        button {
+            width: 100%;
+            background-color: rgba(0,0,0,0.3);
+            color: var(--color-text);
+            cursor: pointer;
+            margin-top: 2rem;
+
+            &:hover {
+                background-color: rgba(0,0,0,0.2);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+  .app__orders-controls {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  
+  .app__orders-controls_search {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+    input {
+        width: 100%;
+    }
+  }
+  
+  .app__orders-controls_button {
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    button {
+        margin: 0;
+    }
+  }
+  
+}

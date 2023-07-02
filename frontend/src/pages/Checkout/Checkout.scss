@@ -1,0 +1,205 @@
+.app__checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__checkout-banner {
+    width: 100%;
+    height: 150px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.app__checkout-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.app__checkout-content_payment {
+    background-color: var(--color-gray);
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 4rem 8rem;
+}
+
+.app__payment-express {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        letter-spacing: -0.05em;
+        color: #7D7F83;
+        margin-bottom: 1rem;
+    }
+}
+
+.app__payment-express_buttons {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        background: #D9D9D9;
+        border-radius: 5px;
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        border: none;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+}
+
+.app__payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app__payment-form_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.app__payment-form_billing {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    
+    div {
+        display: flex;
+        gap: 0.8rem;
+
+        input {
+            flex:1
+        }
+    }
+}
+
+.app__payment-form_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    a:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    button {
+
+        &:hover {
+            background-color: var(--color-highlight);
+        }
+        &:active {
+            background-color: var(--color-title);
+        }
+    }
+}
+
+
+.app__checkout-content_items {
+    flex:1;
+    padding: 6rem 0 4rem 8rem;
+}
+.app__checkout-content_items-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+}
+.app__checkout-content_items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app__item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+    }
+
+    h1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.05em;
+        color: #FFFFFF;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--color-subtext);
+    }
+
+    div {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+}
+
+.app__checkout-content_items-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+    }
+
+    h1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.05em;
+        color: #FFFFFF;
+    }
+}

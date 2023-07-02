@@ -1,0 +1,45 @@
+.app__404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    h1 {
+        font-family: var(--font-title);
+        font-size: 64px;
+        color: var(--color-text);
+    }
+
+    h2 {
+        font-family: var(--font-family);
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--color-text);
+
+        span {
+            font-family: var(--font-title);
+            color: var(--color-title);
+            font-size: 42px;
+        }
+    }
+
+    p {
+        margin-top: 3rem;
+        font-family: var(--font-family);
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--color-subtext);
+
+        span {
+            cursor: pointer;
+            text-decoration: underline;
+            color: var(--color-text);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
