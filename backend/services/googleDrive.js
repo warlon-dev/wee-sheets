@@ -1,10 +1,13 @@
 const fs = require('fs');
 const { google } = require('googleapis');
 const File = require('../models/File.js');
+const dotenv = require('dotenv');
+
+dotenv.config(); 
 
 const auth = new google.auth.GoogleAuth({
-  keyFile: `C:\\Users\\Warlon\\Desktop\\wee-sheets\\wee-sheets-341228291b34.json`,
-  apiKey: 'AIzaSyBOgKioS0QbRC7R6o0HiLKTMCe21tpvJ88',
+  keyFile: process.env.CLIENT_CREDENTIALS,
+  apiKey: process.env.CLIENT_API_KEY,
   scopes: ['https://www.googleapis.com/auth/drive.file']
 });
 
@@ -87,17 +90,6 @@ module.exports.upload = (file) => {
         });
     });
   };
-  // module.exports.getFileStream = async (fileId) => {
-  //   try {
-  //     console.log(fileId);
-
-  //     const response = await drive.files.get({ fileId, alt: 'media' }, { responseType: 'stream' });
-  //     return response.data;
-  //   } catch (error) {
-  //     console.error('Error retrieving file from Google Drive:', error);
-  //     throw error;
-  //   }
-  // };
 
   module.exports.streamToBuffer = (stream) => {
     return new Promise((resolve, reject) => {
